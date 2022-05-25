@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.pendulum {
+    height: 90vh;
+    position: absolute;
+    top: 5vh;
+    left: calc(50vw - 9vh/2);
+    transform: rotate(45deg);
+    transform-origin: top center;
+}
+
+.slider-angle_container {
+    padding-top: 10px;
+}
+
+#angle-value {
+    margin-top: 15px;
+    margin-left: 40px;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.slider-length_container {
+    position: absolute;
+    top: 3vh;
+    right: 1vw;
+    transform-origin: top left;
+    transform: rotate(90deg) translateY(-94vh);
+    width: 94vh;
+}
+
+#length-value {
+    position: absolute;
+    top: 80px;
+    right: 60px;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.slider-mass_container {
+    position: absolute;
+    bottom: 6vh;
+    left: 1vw;
+    width: 20vw;
+}
+
+#mass-value {
+    position: absolute;
+    bottom: 6vh;
+    left: 21vw;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.slider-gravity_container {
+    position: absolute;
+    bottom: 3vh;
+    left: 1vw;
+    width: 20vw;
+}
+
+#gravity-value {
+    position: absolute;
+    bottom: 3vh;
+    left: 21vw;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.control-buttons {
+    position: absolute;
+    top: 35px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.energy-wrapper {
+    position: absolute;
+    top: 12 5px;
+    right: 60px;
+    width: max-content;
+    text-align: end;
+    font-size: x-large;
+    white-space: nowrap;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.options-wrapper {
+    position: absolute;
+    bottom: 9vh;
+    right: 5vw;
+    font-size: 18px;
+}
+
+.pend-selection {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+}
+
+.algorithm-options {
+    display: grid;
+    margin: 0;
+}
+
+.graphBtn {
+    position: absolute;
+    bottom: 5vh;
+    right: 5vw;
+}
+
+#myChart {}
+
+.mdl-radio {
+    margin: 0.5em 0;
+}
+
+.MJXc-display {
+    margin: 0 !important;
+}
+
+.install-prompt {
+    display: none;
+}
+
+.pull-left {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+@media (pointer: coarse) {
+    .install-prompt {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0.9;
+        z-index: 100;
+        width: 100vw;
+        background-color: lightgrey;
+    }
+}
+
+@media all and (display-mode: standalone) {
+    .install-prompt {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 70em) {
+    .pendulum {
+        height: 85vh;
+        top: 10vh;
+        left: calc(50vw - 8.5vh/2);
+    }
+    .control-buttons::selection {
+        background: none;
+    }
+    .control-buttons>.material-icons {
+        font-size: 32px;
+    }
+    .slider-mass_container {
+        bottom: 8vh;
+    }
+    #mass-value {
+        bottom: 8vh;
+        font-size: large;
+    }
+    .slider-gravity_container {
+        bottom: 3vh;
+    }
+    #gravity-value {
+        bottom: 3vh;
+        font-size: large;
+    }
+}
